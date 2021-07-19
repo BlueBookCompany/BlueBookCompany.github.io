@@ -878,6 +878,18 @@ Banner Style
   height: 532px;
 }
 
+.main-banner:before {
+  content: '';
+  background-image: url(../images/Dashboard.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  right: 0;
+  top: 100px;
+  width: 819px;
+  height: 674px;
+}
+
 .main-banner .item {
   margin-right: 45px;
 }

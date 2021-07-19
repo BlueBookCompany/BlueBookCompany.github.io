@@ -50,7 +50,24 @@
         position: relative;
         font-size: 5rem;
         }
-
+       #typing-text {
+           color: #000000;
+           border: solid 1px #A8A8A8;
+           font-style: italic;
+           font-weight: bold;
+           text-align: right;
+           font-family: Arial, Helvetica, sans-serif;
+           overflow: auto;
+           background-color: #FFFFFF;
+           font-size: 15px;
+           padding: 5px;
+           height: 30px;
+           width: 500px;
+           box-shadow: -20px -20px 4px 0px #A3A3A3;
+           outline: none;
+           resize: none;
+           box-sizing: border-box;
+      }
     </style>
   </head>
 
@@ -108,15 +125,52 @@
             <div class="col-lg-6 align-self-center">
               <div class="owl-carousel owl-banner">
                 <div class="item header-text">
-                  <h6>Welcome to Onix Digital</h6>
-                  <h2>Build <em>your website</em> the best in <span>SEO</span>?</h2>
-                  <p>This is a professional looking HTML Bootstrap 5 website template brought to you by TemplateMo website.</p>
+                  <h6>BlueBook</h6>
+                  <h2>Tired of collaboration tools <span>failing</span>? Us too, that why we are developing <em>BlueBook</em></h2>
+                  <p style="color: gray">The Tool for Students, Teachers, Companies, Schools, Projects. Customize BlueBook for your needs.</p>
                   <div class="down-buttons">
                     <div class="main-blue-button-hover">
-                      <a href="#">Try it Out?</a>
+                      <a href="404.html">Try it Out?</a>
                     </div>
                   </div>
                 </div>
+              </div>
+              <div style="text-align:center">
+                <br>
+                <textarea id="typing-text" readonly></textarea>
+                <script>
+                    (function () {
+                       var CharacterPos = 0;
+                       var MsgBuffer = "";
+                       var TypeDelay = 100;
+                       var NxtMsgDelay = 1000;
+                       var MsgIndex = 0;
+                       var delay;
+                       var MsgArray = ["404, 404, 404, 404, 404, 4044444","Service always down?","Service unreliable?","Try BlueBook!"];
+
+                       function StartTyping() {
+                          var id = document.getElementById("typing-text");
+                          if (CharacterPos != MsgArray[MsgIndex].length) {
+                             MsgBuffer  = MsgBuffer + MsgArray[MsgIndex].charAt(CharacterPos);
+                             id.value = MsgBuffer+"_";
+                             delay = TypeDelay;
+                             id.scrollTop = id.scrollHeight;
+                          } else {
+                             delay = NxtMsgDelay;
+                             MsgBuffer   = "";
+                             CharacterPos = -1;
+                             if (MsgIndex!=MsgArray.length-1){
+                               MsgIndex++;
+                             }else {
+                               MsgIndex = 0;
+                             }
+                           }
+                           CharacterPos++;
+                           setTimeout(StartTyping,delay);
+                       }
+                    StartTyping();
+                    })();
+                    </script>
               </div>
             </div>
           </div>
@@ -395,7 +449,7 @@
               <li>Basic Support</li>
             </ul>
             <div class="main-blue-button-hover">
-              <a href="#">Try it Out</a>
+              <a href="404.html">Try it Out</a>
             </div>
           </div>
         </div>
@@ -660,8 +714,8 @@
           <div class="community footer-item">
             <h4>Community</h4>
             <ul>
-              <li><a href="#">Discord</a></li>
-              <li><a href="#">Reddit</a></li>
+              <li><a href="404.html">Discord</a></li>
+              <li><a href="404.html">Reddit</a></li>
               <li><a href="https://github.com/BlueBookCompany">Github</a></li>
             </ul>
           </div>
