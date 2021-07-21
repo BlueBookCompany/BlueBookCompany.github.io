@@ -880,7 +880,7 @@ Banner Style
 
 .main-banner:before {
   content: '';
-  background-image: url(../images/Dashboard.svg);
+  background-image: url(../images/svgs/Dashboard.png);
   background-repeat: no-repeat;
   background-size: cover;
   position: absolute;
